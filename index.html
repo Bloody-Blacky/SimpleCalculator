@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>Simple Calculator using HTML, CSS & Javascript by Hema</title>
+    </head>
+
+  <body> 
+    <div class="big-box"> 
+      <h1>Calculator</h1>
+      <input id="inp1" readonly/>
+      <div class="number">
+        <div><button class="btn" onclick="calc('√')">√</button></div>
+        <div><button class="btn" onclick="calc('x²')">x²</button></div>        
+        <div><button class="btn" onclick="calc('C')">C</button></div>
+        <div><button class="btn" onclick="calc('del')">del</button></div>
+
+        <div><button class="btn" onclick="calc(1)">1</button></div>
+        <div><button class="btn" onclick="calc(2)">2</button></div>
+        <div><button class="btn" onclick="calc(3)">3</button></div>
+        <div><button class="btn" onclick="calc('+')">+</button></div>
+
+        <div><button class="btn" onclick="calc(4)">4</button></div>
+        <div><button class="btn" onclick="calc(5)">5</button></div>
+        <div><button class="btn" onclick="calc(6)">6</button></div>
+        <div><button class="btn" onclick="calc('-')">-</button></div>
+
+        <div><button class="btn" onclick="calc(7)">7</button></div>
+        <div><button class="btn" onclick="calc(8)">8</button></div>
+        <div><button class="btn" onclick="calc(9)">9</button></div>
+        <div><button class="btn" onclick="calc('/')">/</button></div>
+
+        <div><button class="btn" onclick="calc('.')">.</button></div>
+        <div><button class="btn" onclick="calc(0)">0</button></div>
+        <div><button class="btn" onclick="calc('*')">*</button></div>
+        <div><button class="btn" onclick="calc('=')">=</button></div>
+
+        
+        
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function calc(i) {
+      var x = document.getElementById("inp1");
+      switch (i) {
+        case 1:
+          x.value += 1;
+          break;
+        case 2:
+          x.value += 2;
+          break;
+        case 3:
+          x.value += 3;
+          break;
+        case 4:
+          x.value += 4;
+          break;
+        case 5:
+          x.value += 5;
+          break;
+        case 6:
+          x.value += 6;
+          break;
+        case 7:
+          x.value += 7;
+          break;
+        case 8:
+          x.value += 8;
+          break;
+        case 9:
+          x.value += 9;
+          break;
+        case 0:
+          x.value += 0;
+          break;
+        case "+":
+          x.value += "+";
+          break;
+        case "-":
+          x.value += "-";
+          break;
+        case "*":
+          x.value += "*";
+          break;
+        case "/":
+          x.value += "/";
+          break;
+        case "C":
+          x.value = " ";
+          break;
+        case '.':
+          x.value += '.';
+          break;
+  
+        case "=":
+          output = eval(x.value);
+          x.value = Math.abs(output);
+          break;
+
+        case "del":
+          output = x.value
+          x.value = output.slice(0,-1)
+          break;
+        case "√":
+          output = eval(x.value);
+          x.value = Math.sqrt(output);
+          break;
+        case "x²":
+          output = eval(x.value);
+          x.value = Math.pow(output,2);
+          break; 
+           
+      }
+    }
+  </script>
+</html>
